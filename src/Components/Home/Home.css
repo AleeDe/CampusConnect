@@ -1,0 +1,171 @@
+/* Main content */
+.maincontent {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1686283376726-dfbef2eaf4b9?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-size: cover;
+  background-position: center;
+}
+
+.maincontent::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Adjust the color and opacity as needed */
+  z-index: 1;
+}
+
+.maincontent > * {
+  position: relative;
+  z-index: 2;
+}
+
+.maincontent h1 {
+  animation: flyIn 1.5s ease-out forwards;
+  opacity: 0;
+  font-size: 90px;
+  color: #ffffff;
+  transition: 1.3s;
+}
+
+.maincontent h3 {
+  animation: flyout 1.5s ease-out forwards;
+  opacity: 0;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.maincontentbtn button {
+  width: 110px;
+  margin: 30px 20px;
+  height: 40px;
+  border: 1px wheat solid;
+  border-radius: 40px;
+  background-color: transparent;
+  color: #991d1d;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.maincontentbtn button:first-child {
+  background-color: blue;
+  border: none;
+}
+
+.maincontentbtn button:hover {
+  scale: 1.1;
+  transition: 0.5s;
+  background: #05a11f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .maincontent {
+    height: auto;
+    padding: 40px 20px;
+  }
+
+  .maincontent h1 {
+    font-size: 70px;
+  }
+
+  .maincontent h3 {
+    font-size: 25px;
+  }
+
+  .maincontentbtn button {
+    width: 100px;
+    height: 35px;
+    font-size: 14px;
+    margin: 20px 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .maincontent {
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  .maincontent h1 {
+    font-size: 50px;
+  }
+
+  .maincontent h3 {
+    font-size: 20px;
+  }
+
+  .maincontentbtn button {
+    width: 90px;
+    height: 30px;
+    font-size: 12px;
+    margin: 15px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .maincontent {
+    height: 100vh;
+    padding: 10px 5px;
+  }
+
+  .maincontent h1 {
+    font-size: 25px;
+    
+  }
+
+  .maincontent h3 {
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .maincontentbtn button {
+    width: 80px;
+    height: 25px;
+    font-size: 10px;
+    margin: 10px 5px;
+  }
+}
+
+@keyframes flyIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes flyout {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.maincontentbtn button:first-child a {
+  color: #e9e9e9;
+  text-decoration: unset;
+  border: none;
+}
+
+.maincontentbtn button a {
+  color: #ffffff;
+  text-decoration: unset;
+  border: none;
+}

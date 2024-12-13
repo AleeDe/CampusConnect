@@ -1,0 +1,4 @@
+/* Adjust these values based on your navbar's height */
+.main-content {
+  padding-top: 68px; /* Assuming your navbar is 60px tall */
+}

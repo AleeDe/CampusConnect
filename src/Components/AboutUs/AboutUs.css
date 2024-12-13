@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+.aboutUsContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.aboutUsHero {
+  background: linear-gradient(135deg, #3498db, #8e44ad);
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.aboutUsHero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.aboutUsTagline {
+  font-size: 1.2rem;
+  opacity: 0.8;
+}
+
+.aboutUsOriginStory h2, .aboutUsTeamSection h2, .aboutUsVision h2 {
+  color: #3498db;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.aboutUsOriginStory h2::after, .aboutUsTeamSection h2::after, .aboutUsVision h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.aboutUsOriginStory, .aboutUsTeamSection, .aboutUsVision {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.aboutUsStoryContent p {
+  margin-bottom: 20px;
+}
+
+.aboutUsChallengesList {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.aboutUsChallengesList li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.aboutUsChallengesList li::before {
+  content: '✓';
+  color: #3498db;
+  position: absolute;
+  left: -20px;
+}
+
+.aboutUsTeamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.aboutUsTeamMember {
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.aboutUsTeamMember:hover {
+  transform: translateY(-5px);
+}
+
+.aboutUsMemberPhoto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  background-size: cover;
+  background-position: center;
+  border: 5px solid #3498db;
+}
+
+.aboutUsTeamMember h3 {
+  color: #2c3e50;
+  margin-bottom: 5px;
+}
+
+.aboutUsTeamMember p {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.aboutUsVision {
+  background-color: #3498db;
+  color: white;
+}
+
+.aboutUsVision h2 {
+  color: white;
+}
+
+.aboutUsVision h2::after {
+  background-color: white;
+}
+
+@media (max-width: 768px) {
+  .aboutUsHero {
+    padding: 40px 20px;
+  }
+
+  .aboutUsHero h1 {
+    font-size: 2.5rem;
+  }
+
+  .aboutUsTagline {
+    font-size: 1rem;
+  }
+
+  .aboutUsOriginStory, .aboutUsTeamSection, .aboutUsVision {
+    padding: 30px;
+  }
+
+  .aboutUsTeamGrid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutUsHero h1 {
+    font-size: 2rem;
+  }
+
+  .aboutUsOriginStory h2, .aboutUsTeamSection h2, .aboutUsVision h2 {
+    font-size: 1.5rem;
+  }
+
+  .aboutUsOriginStory, .aboutUsTeamSection, .aboutUsVision {
+    padding: 20px;
+  }
+
+  .aboutUsTeamGrid {
+    grid-template-columns: 1fr;
+  }
+}
