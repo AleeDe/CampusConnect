@@ -21,7 +21,7 @@ export default function Post() {
     const fetchStudentData = useCallback(async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://44.223.145.60:8080/jiPost', {
+            const response = await axios.get('http://54.166.196.136:8080/jiPost', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
