@@ -41,7 +41,7 @@ export default function Post() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:8080/jiPost/${id}`, {
+            const response = await axios.delete(`http://54.221.19.62:8080/jiPost/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
