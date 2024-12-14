@@ -36,7 +36,7 @@ const ResourcePage = () => {
 
     const deleteResource = async (id) => {
         try {
-            const response = await axios.delete(`http://localhost:8080/resources/${id}`, {
+            const response = await axios.delete(`http://54.221.19.62:8080/resources/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
