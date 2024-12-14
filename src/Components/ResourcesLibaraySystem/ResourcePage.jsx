@@ -16,7 +16,7 @@ const ResourcePage = () => {
     const fetchResources = useCallback(async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://localhost:8080/resources', {
+            const response = await axios.get('http://54.221.19.62:8080/resources', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
