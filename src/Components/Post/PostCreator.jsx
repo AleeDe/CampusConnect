@@ -27,7 +27,7 @@ export default function PostCreator({ onClose, refreshData }) {
         e.preventDefault();
         const token = localStorage.getItem('token');
         try {
-            const response = await axios.post('http://44.223.145.60:8080/jiPost', formData, {
+            const response = await axios.post('http://54.166.196.136:8080/jiPost', formData, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
