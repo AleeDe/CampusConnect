@@ -29,7 +29,7 @@ export default function Login({ setIsAuthenticated }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:8080/log', formData);
+            const response = await axios.post('http://54.221.19.62:8080/log', formData);
             if (response.data) { // Assuming the API returns the token as a plain string
                 setSuccessMessage("Login successful!");
                 toast.success("Login successful!");
