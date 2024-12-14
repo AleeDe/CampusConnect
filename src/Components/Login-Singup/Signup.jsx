@@ -36,7 +36,7 @@ export default function Login({ setIsAuthenticated }) {
         }
 
         try {
-            const response = await axios.post('http://18.212.239.27:8080/signup', formData);
+            const response = await axios.post('http://localhost:8080/signup', formData);
             if (response.data) { // Assuming the API returns the token as a plain string
                 setSuccessMessage("Login successful!");
                 setErrorMessage('');
