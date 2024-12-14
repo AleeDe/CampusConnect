@@ -16,7 +16,7 @@ const ResourcePage = () => {
     const fetchResources = useCallback(async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://44.223.145.60:8080/resources', {
+            const response = await axios.get('http://54.166.196.136:8080/resources', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -36,7 +36,7 @@ const ResourcePage = () => {
 
     const deleteResource = async (id) => {
         try {
-            const response = await axios.delete(`http://44.223.145.60:8080/resources/${id}`, {
+            const response = await axios.delete(`http://54.166.196.136:8080/resources/${id}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
