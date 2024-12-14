@@ -26,7 +26,7 @@ export default function EditPost({ onClose, post, refreshData }) {
         e.preventDefault();
         const token = localStorage.getItem('token');
         try {
-            const response = await axios.put(`http://18.212.239.27:8080/jiPost/${post.stringId}`, postData, {
+            const response = await axios.put(`http://localhost:8080/jiPost/${post.stringId}`, postData, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
