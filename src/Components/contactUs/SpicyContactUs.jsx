@@ -28,7 +28,7 @@ export default function SpicyContactUs() {
         e.preventDefault();
         const token = localStorage.getItem('token');
         try {
-            const response = await axios.post('http://localhost:8080/contactus', formData, {
+            const response = await axios.post('https://campus-connect-hazel-rose.vercel.app/contactus', formData, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
