@@ -51,7 +51,7 @@ const ResourceUpload = ({ refreshData }) => {
         const token = localStorage.getItem('token');
 
         try {
-            const response = await axios.post('http://44.223.145.60:8080/resources', formData, {
+            const response = await axios.post('http://54.166.196.136:8080/resources', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data',
                     'Authorization': `Bearer ${token}`
