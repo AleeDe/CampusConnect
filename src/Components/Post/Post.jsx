@@ -21,7 +21,7 @@ export default function Post() {
     const fetchStudentData = useCallback(async () => {
         setLoading(true);
         try {
-            const response = await axios.get('http://54.221.19.62:8080/jiPost', {
+            const response = await axios.get('http://44.223.145.60:8080/jiPost', {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
@@ -41,7 +41,7 @@ export default function Post() {
 
     const handleDelete = async (id) => {
         try {
-            const response = await axios.delete(`http://54.221.19.62:8080/jiPost/${id}`, {
+            const response = await axios.delete(`http://44.223.145.60:8080/jiPost/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
